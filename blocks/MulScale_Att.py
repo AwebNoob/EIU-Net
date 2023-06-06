@@ -80,7 +80,7 @@ class MultiScaleAttention(nn.Module):
         attention = self.channel_att(self.conv_xy(attention))
 
         out = x * attention + y * (1 - attention)
-        out = self.conv_out(out)
+        #out = self.conv_out(out)
         return out
 
     def forward(self, x, y):
