@@ -237,7 +237,7 @@ class Combined_Bce_Dice_Loss(nn.Module):
         dc_loss = self.dc(net_output, target)
 
         if self.aggregate == "sum":
-            result = 0.6 * ce_loss + 0.4 *dc_loss
+            result = 0.6 * ce_loss + 0.4 *dc_loss # 也可0.8+0.2的搭配
         else:
             raise NotImplementedError("nah son")  # reserved for other stuff (later)
 
